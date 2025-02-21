@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background-color: black;
+    color: green;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    overflow: hidden;
+}
+
+#hack-screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#loading, #countdown, #progress, #done-text, #final-message {
+    font-size: 24px;
+    opacity: 0;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    50% { opacity: 1; }
+}
+
+#matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    color: lime;
+    white-space: nowrap;
+    display: none;
+    z-index: -1;
+}
+
+#unlock-btn {
+    display: none;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#unlock-btn:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
+
+#final-message {
+    display: none;
+}
